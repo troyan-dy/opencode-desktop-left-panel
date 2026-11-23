@@ -2,10 +2,26 @@
 
 Move the OpenCode Desktop session side panel to the left.
 
-From your global OpenCode configuration directory (normally `~/.config/opencode`):
+## Install in OpenCode Desktop
+
+From the global OpenCode configuration directory (normally `~/.config/opencode`), run:
 
 ```sh
 git clone https://github.com/troyan-dy/opencode-desktop-left-panel.git local-themes/left-panel
 ```
 
-Add `"./local-themes/left-panel"` to the `plugins` array in the global `opencode.jsonc`.
+Add the following entries to the existing `plugins` array in your global `opencode.jsonc`:
+
+```jsonc
+{
+  "plugins": [
+    "./local-themes/left-panel"
+  ]
+}
+```
+
+## Usage
+
+On Desktop windows at least 768 CSS pixels wide, the session side panel appears on the left. The outer resize handle and panel toggle move with it.
+
+This plugin uses the [experimental OpenCode Desktop GUI plugin API](https://opencode.ai/docs/build/plugins/gui).
